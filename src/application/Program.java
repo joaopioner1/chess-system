@@ -1,6 +1,6 @@
 package application;
 
-import boardgame.Board;
+import chess.ChessMatch;
 
 public class Program {
 	
@@ -8,8 +8,8 @@ public class Program {
 		//Author: Joao Vitor Souza Pioner | Date: 26/04/2021 10:38
 		//Last edition: 
 		
-		Board board = new Board(6, 6);
-		 
+		ChessMatch cm = new ChessMatch();
 		
+		UI.printBoard(cm.getPieces());
 	}
 }
