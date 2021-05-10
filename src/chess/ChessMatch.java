@@ -104,7 +104,7 @@ public class ChessMatch {
 		ChessPiece p = (ChessPiece)board.removePiece(target);
 		p.increaseMoveCount();
 		board.placePiece(p, source);
-		
+		//--
 		if (capturedPiece != null) {
 			board.placePiece(capturedPiece, target);
 			capturedPieces.remove(capturedPiece);
