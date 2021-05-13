@@ -13,7 +13,8 @@ import chess.ChessPosition;
 public class Program {
 
 	public static void main(String[] args) {
-		//finish project in 12/05/2021
+		//finish project in 12/05/2021 |  Joao Vitor Souza Pioner 
+
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
@@ -41,7 +42,11 @@ public class Program {
 				
 				if (chessMatch.getPromoted() != null) {
 					System.out.print("Enter piece for promotion (B/N/R/Q): ");
-					String type = sc.nextLine();
+					String type = sc.nextLine().toUpperCase();
+					while (!type.equals("B") && !type.equals("N") && !type.equals("R") & !type.equals("Q")) {
+						System.out.print("Invalid value! Enter piece for promotion (B/N/R/Q): ");
+						type = sc.nextLine().toUpperCase();
+					}
 					chessMatch.replacePromotedPiece(type);
 				}
 			}
@@ -58,3 +63,4 @@ public class Program {
 		UI.printMatch(chessMatch, captured);
 	}
 }
+ 
